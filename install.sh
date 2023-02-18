@@ -3,6 +3,7 @@ sudo apt-get update && sudo apt-get install stow
 
 # loop over folders
 for folder in */ ; do
+	stow --adopt -t $HOME $folder
 	# remove previous stows
 	stow -t $HOME -D $folder
 	
