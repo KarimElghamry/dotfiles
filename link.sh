@@ -3,12 +3,12 @@ sudo apt-get update && sudo apt-get install stow
 
 # loop over folders
 for folder in */ ; do
+	# adopt existing files
 	stow --adopt -t $HOME $folder
-	# remove previous stows
-	stow -t $HOME -D $folder
-	
-	# mount new simlinks
-	stow -v -t $HOME $folder
+	git restore .
+
+	# mount new symlinks
+	stow -v --restow -t $HOME $folder
 done
 
 # reload shell
