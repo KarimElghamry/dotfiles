@@ -1,5 +1,5 @@
 # install vim
-sudo apt-get install vim
+sudo apt-get install vim -y
 
 # install zsh and set as default shell
 sudo apt-get install zsh -y
