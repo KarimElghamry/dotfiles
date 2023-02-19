@@ -1,15 +1,22 @@
-# install stow
-sudo apt-get update && sudo apt-get install stow
+# install vim
+sudo apt-get install vim
 
-# loop over folders
-for folder in */ ; do
-	stow --adopt -t $HOME $folder
-	# remove previous stows
-	stow -t $HOME -D $folder
-	
-	# mount new simlinks
-	stow -v -t $HOME $folder
-done
+# install zsh and set as default shell
+sudo apt-get install zsh -y
+chsh -s $(which zsh)
 
-# reload shell
-exec $SHELL -l
+# install oh my zsh
+sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+
+# install powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+# install zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+# install zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# link dotfiles
+chmod +x ./link.sh
+exec ./link.sh
