@@ -1,7 +1,7 @@
 # install vim and related plugins
 sudo apt-get install vim -y
 mkdir -p ~/.vim/colors/
-wget https://raw.githubusercontent.com/morhetz/gruvbox/master/colors/gruvbox.vim -P ~/.vim/colors/
+wget https://raw.githubusercontent.com/whatyouhide/vim-gotham/main/colors/gotham256.vim -P ~/.vim/colors/
 git clone https://github.com/vimwiki/vimwiki.git ~/.vim/pack/plugins/start/vimwiki
 vim -c 'helptags ~/.vim/pack/plugins/start/vimwiki/doc' -c quit
 
