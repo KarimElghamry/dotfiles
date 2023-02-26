@@ -1,9 +1,9 @@
 # install vim and related plugins
 sudo apt-get install vim -y
-git clone https://github.com/vimwiki/vimwiki.git ~/.vim/pack/plugins/start/vimwiki
-vim -c 'helptags ~/.vim/pack/plugins/start/vimwiki/doc' -c quit
 mkdir -p ~/.vim/colors/
 wget https://raw.githubusercontent.com/morhetz/gruvbox/master/colors/gruvbox.vim -P ~/.vim/colors/
+git clone https://github.com/vimwiki/vimwiki.git ~/.vim/pack/plugins/start/vimwiki
+vim -c 'helptags ~/.vim/pack/plugins/start/vimwiki/doc' -c quit
 
 # install zsh and set as default shell
 sudo apt-get install zsh -y
