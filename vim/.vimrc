@@ -27,3 +27,14 @@ let mapleader = "\<Space>"
 set nocompatible
 filetype plugin on
 let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
+
+
+" cursor settings
+let &t_EI = "\e[1 q"
+let &t_SI = "\e[5 q"
+
+" timeout settings
+set timeout
+set ttimeout
+set timeoutlen=3000
+set ttimeoutlen=10

@@ -28,4 +28,3 @@ export KEYTIMEOUT=1
 
 # register aliases
 . "$HOME/.aliases"
-
