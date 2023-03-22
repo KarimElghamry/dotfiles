@@ -15,6 +15,7 @@ plugins=(
 	zsh-syntax-highlighting
 	catimg
 	python
+	zsh-vi-mode
 	)
 
 source $ZSH/oh-my-zsh.sh
