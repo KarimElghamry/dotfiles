@@ -15,7 +15,6 @@ plugins=(
 	zsh-syntax-highlighting
 	catimg
 	python
-	zsh-vi-mode
 	)
 
 source $ZSH/oh-my-zsh.sh
@@ -23,5 +22,10 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# vi mode
+bindkey -v
+export KEYTIMEOUT=1
+
 # register aliases
 . "$HOME/.aliases"
+
