@@ -18,7 +18,7 @@ endif
 syntax on
 set termguicolors
 set background=dark
-colorscheme gotham256 
+colorscheme tokyonight 
 
 " mappings
 let mapleader = "\<Space>"
