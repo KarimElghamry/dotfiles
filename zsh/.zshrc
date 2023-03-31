@@ -26,5 +26,5 @@ source $ZSH/oh-my-zsh.sh
 bindkey -v
 export KEYTIMEOUT=1
 
-# register aliases
-. "$HOME/.aliases"
+# source files 
+source ~/.aliases
