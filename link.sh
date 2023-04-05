@@ -1,5 +1,5 @@
 # install stow
-sudo apt-get update && sudo apt-get install stow
+sudo apt-get update && sudo apt-get install stow -y
 
 # loop over folders
 for folder in */ ; do
