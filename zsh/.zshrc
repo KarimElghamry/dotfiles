@@ -26,3 +26,4 @@ export KEYTIMEOUT=1
 
 # source files 
 source ~/.aliases
+source ~/.env
