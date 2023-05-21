@@ -1,5 +1,4 @@
 set relativenumber
-set mouse=a
 
 set noexpandtab
 set tabstop=2
