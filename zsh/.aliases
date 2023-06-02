@@ -1,1 +1,2 @@
 alias git.commit='~/bin/git-commit.sh'
+alias xsc='xclip -selection clipboard'
