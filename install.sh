@@ -4,6 +4,7 @@ mkdir -p ~/.vim/colors/
 wget https://raw.githubusercontent.com/ghifarit53/tokyonight-vim/master/colors/tokyonight.vim -P ~/.vim/colors/
 git clone https://github.com/vimwiki/vimwiki.git ~/.vim/pack/plugins/start/vimwiki
 vim -c 'helptags ~/.vim/pack/plugins/start/vimwiki/doc' -c quit
+git clone https://github.com/KarimElghamry/vim-auto-comment.git ~/.vim/pack/plugins/start/vim-auto-comment
 
 # install zsh and set as default shell
 sudo apt-get install zsh -y
