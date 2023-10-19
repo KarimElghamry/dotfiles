@@ -6,6 +6,10 @@ git clone https://github.com/vimwiki/vimwiki.git ~/.vim/pack/plugins/start/vimwi
 vim -c 'helptags ~/.vim/pack/plugins/start/vimwiki/doc' -c quit
 git clone https://github.com/KarimElghamry/vim-auto-comment.git ~/.vim/pack/plugins/start/vim-auto-comment
 
+# install tmux and related plugins
+sudo apt-get install tmux -y
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 # install zsh and set as default shell
 sudo apt-get install zsh -y
 chsh -s $(which zsh)
