@@ -4,6 +4,7 @@ This repo contains all of my default dotfile cofigurations for different apps/sh
 
 - `.vimrc`
 - `.zshrc`
+- `.tmux.config`
 - `oh-my-zsh` and it's related plugins
 - `p10k` config
 - Alacritty's configuration `alacritty.yaml`
