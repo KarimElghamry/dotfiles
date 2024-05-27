@@ -29,6 +29,10 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 # install xclip
 sudo apt-get install xclip -y
 
+# install fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install --all
+
 # link dotfiles
 chmod +x ./link.sh
 exec ./link.sh
