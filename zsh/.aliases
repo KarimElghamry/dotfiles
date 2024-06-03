@@ -1,3 +1,4 @@
 alias git.commit='~/bin/git-commit.sh'
 alias xsc='xclip -selection clipboard'
 alias vim=nvim 
+alias ide=/usr/local/bin/vim_ide.sh

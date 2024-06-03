@@ -1,10 +1,10 @@
-# install vim and related plugins
-sudo apt-get install vim -y
-mkdir -p ~/.vim/colors/
-wget https://raw.githubusercontent.com/ghifarit53/tokyonight-vim/master/colors/tokyonight.vim -P ~/.vim/colors/
-git clone https://github.com/vimwiki/vimwiki.git ~/.vim/pack/plugins/start/vimwiki
-vim -c 'helptags ~/.vim/pack/plugins/start/vimwiki/doc' -c quit
-git clone https://github.com/KarimElghamry/vim-auto-comment.git ~/.vim/pack/plugins/start/vim-auto-comment
+# install nvim
+curl -L https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz -o /tmp/nvim-linux64.tar.gz
+sudo rm -rf /opt/nvim
+sudo tar -C /opt -xzf /tmp/nvim-linux64.tar.gz
+
+# install nvim_packer
+git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 # install tmux and related plugins
 sudo apt-get install tmux -y
@@ -32,6 +32,13 @@ sudo apt-get install xclip -y
 # install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --all
+
+# copy scripts
+for file in ./scripts/*.sh;
+do
+    chmod $file
+    sudo cp $file /usr/local/bin
+done
 
 # link dotfiles
 chmod +x ./link.sh
