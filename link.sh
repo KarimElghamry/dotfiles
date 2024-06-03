@@ -2,7 +2,7 @@
 sudo apt-get update && sudo apt-get install stow -y
 
 # define folder ignore list
-ignore = ("scripts")
+ignore=("scripts/")
 
 # loop over folders
 for folder in */ ; do

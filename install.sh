@@ -1,3 +1,4 @@
+#!/bin/bash
 # install nvim
 curl -L https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz -o /tmp/nvim-linux64.tar.gz
 sudo rm -rf /opt/nvim
