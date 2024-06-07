@@ -11,6 +11,16 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvi
 sudo apt-get install tmux -y
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+# install xclip
+sudo apt-get install xclip -y
+
+# install fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install --all
+
+# install ripgrep
+sudo apt-get install ripgrep -y
+
 # install zsh and set as default shell
 sudo apt-get install zsh -y
 chsh -s $(which zsh)
@@ -26,13 +36,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 # install zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
-# install xclip
-sudo apt-get install xclip -y
-
-# install fzf
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install --all
 
 # copy scripts
 for file in ./scripts/*.sh;
