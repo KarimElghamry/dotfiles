@@ -37,7 +37,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 # copy scripts
 for file in ./scripts/*.sh;
 do
-    chmod $file
+    chmod +x $file
     sudo cp $file /usr/local/bin
 done
 
