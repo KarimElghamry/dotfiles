@@ -1,4 +1,10 @@
 #!/bin/bash
+
+# ---------- Tooling ---------- #
+
+# install curl
+sudo apt-get install crul -y
+
 # install nvim
 curl -L https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz -o /tmp/nvim-linux64.tar.gz
 sudo rm -rf /opt/nvim
@@ -20,6 +26,18 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 # install ripgrep
 sudo apt-get install ripgrep -y
+
+# ---------- languages and runtimes ---------- #
+
+# install node 20 & npm
+wget https://nodejs.org/dist/v20.14.0/node-v20.14.0-linux-x64.tar.xz -O /tmp/node.tar.xz
+sudo tar -xf /tmp/node.tar.xz --one-top-level -C /usr/local/
+
+# install go 1.22.4
+wget https://go.dev/dl/go1.22.4.linux-amd64.tar.gz -O /tmp/go.tar.gz
+sudo tar -xf /tmp/go.tar.xz --one-top-level -C /usr/local/
+
+# ---------- shell ---------- #
 
 # install zsh and set as default shell
 sudo apt-get install zsh -y
