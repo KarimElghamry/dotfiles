@@ -1,5 +1,7 @@
+-- vars and inits
 local builtin = require("telescope.builtin")
 local telescope = require("telescope")
+local is_inside_git_directory = {}
 
 -- setup
 telescope.setup({
@@ -31,7 +33,20 @@ telescope.setup({
 telescope.load_extension("file_browser")
 
 -- remaps
-vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
+vim.keymap.set("n", "<leader>ff", function()
+	local cwd = vim.fn.getcwd()
+	if is_inside_git_directory[cwd] == nil then
+		vim.fn.system("git rev-parse --is-inside-work-tree")
+		is_inside_git_directory[cwd] = vim.v.shell_error == 0
+	end
+
+	if is_inside_git_directory[cwd] then
+		builtin.git_files()
+	else
+		builtin.find_files()
+	end
+end, {})
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 vim.keymap.set("n", "<leader>fe", telescope.extensions.file_browser.file_browser)
+vim.keymap.set("n", "<leader>fh", builtin.buffers, {})
