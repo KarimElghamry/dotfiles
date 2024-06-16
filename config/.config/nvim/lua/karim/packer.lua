@@ -11,9 +11,9 @@ return require("packer").startup(function(use)
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
+	-- oil file browser
 	use({
-		"nvim-telescope/telescope-file-browser.nvim",
-		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+		"stevearc/oil.nvim",
 	})
 
 	-- colorscheme

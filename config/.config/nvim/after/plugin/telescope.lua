@@ -5,13 +5,6 @@ local is_inside_git_directory = {}
 
 -- setup
 telescope.setup({
-	extensions = {
-		file_browser = {
-			hijack_netrw = true,
-			hidden = { file_browser = true, folder_browser = true },
-			grouped = true,
-		},
-	},
 	pickers = {
 		find_files = {
 			hidden = true,
@@ -30,8 +23,6 @@ telescope.setup({
 	},
 })
 
-telescope.load_extension("file_browser")
-
 -- remaps
 vim.keymap.set("n", "<leader>ff", function()
 	local cwd = vim.fn.getcwd()
@@ -48,5 +39,4 @@ vim.keymap.set("n", "<leader>ff", function()
 end, {})
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
-vim.keymap.set("n", "<leader>fe", telescope.extensions.file_browser.file_browser)
 vim.keymap.set("n", "<leader>fh", builtin.buffers, {})
