@@ -16,6 +16,11 @@ return require("packer").startup(function(use)
 		"stevearc/oil.nvim",
 	})
 
+	-- icons
+	use({
+		"nvim-tree/nvim-web-devicons",
+	})
+
 	-- colorscheme
 	use({
 		"folke/tokyonight.nvim",
