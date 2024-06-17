@@ -3,6 +3,21 @@
 # consts
 BIN_FOLDER=/usr/local/bin/
 
+# helper functions
+stow_files() {
+    local target="${1}"
+    shift
+    local folders="${@}"
+
+    echo "stowing $folders to $target"
+	# adopt existing files
+	sudo stow --adopt -t $target $folders
+	git restore .
+
+	# mount new symlinks
+	sudo stow -v --restow -t $target $folders
+}
+
 # install stow
 sudo apt-get update && sudo apt-get install stow -y
 
@@ -10,27 +25,8 @@ sudo apt-get update && sudo apt-get install stow -y
 home_stows=("config/" "tmux/" "vim/" "zsh/")
 bin_stows=("scripts/")
 
-# loop over home folder 
-for folder in "${home_stows[@]}"; do
-    echo "stowing $folder to $HOME"
-	# adopt existing files
-	stow --adopt -t $HOME $folder
-	git restore .
-
-	# mount new symlinks
-	stow -v --restow -t $HOME $folder
-done
-
-# loop over bin folders
-for folder in "${bin_stows[@]}"; do
-    echo "stowing $folder to $BIN_FOLDER"
-	# adopt existing files
-	sudo stow --adopt -t $BIN_FOLDER $folder
-	git restore .
-
-	# mount new symlinks
-	sudo stow -v --restow -t $BIN_FOLDER $folder
-done
+stow_files $HOME ${home_stows[@]}
+stow_files $BIN_FOLDER ${bin_stows[@]}
 
 # reload shell
 exec $SHELL -l
