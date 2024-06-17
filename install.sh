@@ -6,7 +6,7 @@
 sudo apt-get install crul -y
 
 # install nvim
-curl -L https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz -o /tmp/nvim-linux64.tar.gz
+sudo curl -L https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz -o /tmp/nvim-linux64.tar.gz
 sudo rm -rf /opt/nvim
 sudo tar -C /opt -xzf /tmp/nvim-linux64.tar.gz
 
