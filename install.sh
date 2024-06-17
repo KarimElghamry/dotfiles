@@ -35,7 +35,7 @@ sudo tar -xf /tmp/node.tar.xz --one-top-level -C /usr/local/
 
 # install go 1.22.4
 wget https://go.dev/dl/go1.22.4.linux-amd64.tar.gz -O /tmp/go.tar.gz
-sudo tar -xf /tmp/go.tar.xz --one-top-level -C /usr/local/
+sudo tar -xf /tmp/go.tar.gz --one-top-level -C /usr/local/
 
 # ---------- shell ---------- #
 
