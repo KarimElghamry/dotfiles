@@ -3,7 +3,7 @@
 # ---------- Tooling ---------- #
 
 # install curl
-sudo apt-get install crul -y
+sudo apt-get install curl -y
 
 # install nvim
 sudo curl -L https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz -o /tmp/nvim-linux64.tar.gz
