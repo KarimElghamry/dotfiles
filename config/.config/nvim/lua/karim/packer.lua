@@ -37,6 +37,11 @@ return require("packer").startup(function(use)
 		"tpope/vim-fugitive",
 	})
 
+	-- trouble [diagnostics]
+	use({
+		"folke/trouble.nvim",
+	})
+
 	-- lsp
 	use({
 		"VonHeikemen/lsp-zero.nvim",
