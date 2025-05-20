@@ -37,28 +37,41 @@ return require("packer").startup(function(use)
 		"tpope/vim-fugitive",
 	})
 
+	-- nvim lsp
+	use({
+		"folke/lazydev.nvim",
+	})
+
+	-- lsp
+	use({
+		"mason-org/mason-lspconfig.nvim",
+		requires = {
+			{ "mason-org/mason.nvim" },
+			{ "neovim/nvim-lspconfig" },
+		},
+	})
+
+	-- cmp
+	use({
+		"saghen/blink.cmp",
+		requires = {
+			"rafamadriz/friendly-snippets",
+		},
+		tag = "1.*",
+	})
+
 	-- trouble [diagnostics]
 	use({
 		"folke/trouble.nvim",
 	})
 
-	-- lsp
-	use({
-		"VonHeikemen/lsp-zero.nvim",
-		branch = "v3.x",
-		requires = {
-			{ "williamboman/mason.nvim" },
-			{ "williamboman/mason-lspconfig.nvim" },
-
-			{ "neovim/nvim-lspconfig" },
-			{ "hrsh7th/nvim-cmp" },
-			{ "hrsh7th/cmp-nvim-lsp" },
-			{ "L3MON4D3/LuaSnip" },
-		},
-	})
-
 	-- conform formatter
 	use({
 		"stevearc/conform.nvim",
+	})
+
+	-- auto comment
+	use({
+		"numToStr/Comment.nvim",
 	})
 end)
