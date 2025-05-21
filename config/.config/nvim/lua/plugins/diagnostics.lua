@@ -1,6 +1,3 @@
--- enable virtual line diagnostics
-vim.diagnostic.config({ virtual_text = true })
-
 return {
 	"folke/trouble.nvim",
 	cmd = "Trouble",
