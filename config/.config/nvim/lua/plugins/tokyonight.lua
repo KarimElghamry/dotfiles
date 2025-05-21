@@ -1,0 +1,11 @@
+return {
+	"folke/tokyonight.nvim",
+	opts = {
+		style = "night",
+	},
+	priority = 1000,
+	lazy = false,
+	config = function()
+		vim.cmd([[colorscheme tokyonight]])
+	end,
+}
