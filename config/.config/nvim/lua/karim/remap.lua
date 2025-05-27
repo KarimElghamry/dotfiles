@@ -5,3 +5,6 @@ vim.keymap.set("t", "<F2>", [[<C-\><C-n>]], { desc = "return to normal mode from
 -- diagnostic remaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_prev, { desc = "Go to prev [D]iagnostic message" })
+
+-- lsp remaps
+vim.keymap.set("n", "gd", "<C-]>", { desc = "mapping for Go To Definition" })
