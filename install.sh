@@ -10,9 +10,6 @@ sudo curl -L https://github.com/neovim/neovim/releases/latest/download/nvim-linu
 sudo rm -rf /opt/nvim
 sudo tar -C /opt -xzf /tmp/nvim-linux64.tar.gz
 
-# install nvim_packer
-git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-
 # install tmux and related plugins
 sudo apt-get install tmux -y
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
