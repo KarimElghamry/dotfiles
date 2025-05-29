@@ -21,7 +21,7 @@ open_session() {
     tmux attach -t $NAME:0.0
 }
 
-SESSION_NAME="IDE" # default session name
+SESSION_NAME=$(basename $(pwd)) # default session name
 
 # get session name from args, if provided
 if [ -n "$1" ]; then
