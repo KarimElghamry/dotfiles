@@ -6,13 +6,13 @@ open_session() {
 
     # check if duplicate sessions
     if [ $? -ne 0 ]; then
-        echo "attach to session? y/n"
-        read input
+        answer=$(bash -c "read -p 'attach to session $NAME? (y/n): ' -n 1 c; echo \$c")
 
-        if [ $input = 'y' ] || [ $input = 'Y' ]; then
+        if [ $answer = 'y' ] || [ $answer = 'Y' ]; then
             tmux attach -t $NAME
-            exit 0
         fi
+
+        exit 0
     fi
 
     # otherwise, create a new tmux sessions
