@@ -22,3 +22,6 @@ require("lazy").setup({
 	install = { colorscheme = { "habamax" } },
 	checker = { enabled = false },
 })
+
+-- set theme
+vim.cmd([[colorscheme tokyonight]])
