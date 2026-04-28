@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# ---------- languages and runtimes ---------- #
+
+# install node 24 & npm
+wget https://nodejs.org/dist/v24.15.0/node-v24.15.0-linux-x64.tar.xz -O /tmp/node.tar.xz
+sudo tar -xf /tmp/node.tar.xz --one-top-level -C /usr/local/
+
+# install go 1.22.4
+wget https://go.dev/dl/go1.22.4.linux-amd64.tar.gz -O /tmp/go.tar.gz
+sudo tar -xf /tmp/go.tar.gz --one-top-level -C /usr/local/
+
 # ---------- Tooling ---------- #
 
 # install curl
@@ -24,15 +34,8 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 # install ripgrep
 sudo apt-get install ripgrep -y
 
-# ---------- languages and runtimes ---------- #
-
-# install node 20 & npm
-wget https://nodejs.org/dist/v20.14.0/node-v20.14.0-linux-x64.tar.xz -O /tmp/node.tar.xz
-sudo tar -xf /tmp/node.tar.xz --one-top-level -C /usr/local/
-
-# install go 1.22.4
-wget https://go.dev/dl/go1.22.4.linux-amd64.tar.gz -O /tmp/go.tar.gz
-sudo tar -xf /tmp/go.tar.gz --one-top-level -C /usr/local/
+# install pi coding agent
+sudo npm install -g @mariozechner/pi-coding-agent
 
 # ---------- shell ---------- #
 
