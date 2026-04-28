@@ -17,6 +17,7 @@ open_session() {
 
     # otherwise, create a new tmux sessions
     tmux send -t $NAME "vim ." Enter 
+    tmux new-window -n pi "pi"
     tmux new-window -n shell 
     tmux attach -t $NAME:0.0
 }
