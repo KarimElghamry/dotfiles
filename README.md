@@ -1,14 +1,41 @@
 # Dotfiles
 
-This repo contains all of my default dotfile cofigurations for different apps/shells. Configuration includes:
+Personal dotfiles for a productive development environment.
 
-- `.config`:
-  - `nvim`
-  - `alacritty`
-- `.vimrc`
-- `.zshrc`
-- `.tmux.config`
-- `oh-my-zsh` and it's related plugins
-- `p10k` config
+## Directory Structure
 
-The root directory contains an automated install script `install.sh` to install the related software. Also, `stow` is used in `link.sh` to create symlinks between the config files in the repo and the actual dotfiles in the home directory. Simply run `./install.sh` to install and link the config files.
+```
+dotfiles/
+├── config/.config/   # Neovim, Alacritty
+├── tmux/             # Tmux configuration
+├── vim/              # Vim configuration
+├── zsh/              # Zsh, Oh My Zsh, Powerlevel10k
+├── scripts/          # Utility scripts
+├── install.sh        # Automated installation
+└── link.sh           # Symlink creation with Stow
+```
+
+## Configurations
+
+| Component     | Description                                                                   |
+| ------------- | ----------------------------------------------------------------------------- |
+| **Neovim**    | Lua-based config with LSP, Treesitter, Telescope, cmp, lazy.nvim, Tokyo Night |
+| **Alacritty** | GPU terminal with Tokyo Night theme, FiraMono Nerd Font                       |
+| **Tmux**      | Tokyo Night Storm theme, vim keybindings, TPM, prefix `Ctrl+a`                |
+| **Zsh**       | Oh My Zsh, Powerlevel10k, autosuggestions, syntax-highlighting, fzf, vi mode  |
+| **Vim**       | Classic .vimrc for quick editing                                              |
+
+## Quick Start
+
+```bash
+./install.sh
+```
+
+This installs all dependencies and links dotfiles.
+
+## Post-Install
+
+1. Restart shell
+2. Run `p10k configure` for prompt setup
+3. Open Neovim to install plugins
+4. In tmux: `Ctrl+a + I` to install TPM plugins
