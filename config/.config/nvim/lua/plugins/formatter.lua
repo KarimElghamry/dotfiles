@@ -5,6 +5,7 @@ return {
 			lua = { "stylua" },
 			go = { "gofmt" },
 			python = { "black" },
+			java = { "google-java-format" },
 			-- web
 			javascript = { "prettier" },
 			typescript = { "prettier" },
